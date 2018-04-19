@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Gestion de CV"] - Gestion de CV</title>
+    <title>@ViewData["Title"] - AppCV_ProyectoWebRazor</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -21,16 +21,16 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Boton de nav</span>
-                    <span class="icon-bar">djdjd</span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">AppCV_ProjectWeb</a>
+                <a asp-page="/Index" class="navbar-brand">AppCV_ProyectoWebRazor</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">CV</a></li>
+                    <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
                 </ul>
@@ -41,7 +41,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - Gestion de CV</p>
+            <p>&copy; 2017 - AppCV_ProyectoWebRazor</p>
         </footer>
     </div>
 

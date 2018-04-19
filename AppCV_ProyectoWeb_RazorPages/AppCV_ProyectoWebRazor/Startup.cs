@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AppCV_ProjectWeb
+namespace AppCV_ProyectoWebRazor
 {
     public class Startup
     {
