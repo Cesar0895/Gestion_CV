@@ -1,0 +1,60 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.Competencias.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Competencias</h2>
+
+<p>
+    <a class="btn btn-success" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competencia[0].IdCurriculo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competencia[0].IdCompetencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competencia[0].DesCompetencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competencia[0].Dominio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competencia[0].Detalle)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Competencia) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCurriculo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCompetencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesCompetencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dominio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detalle)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.IdCompetenciaDet">Editar</a> |
+                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.IdCompetenciaDet">Details</a> |
+                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.IdCompetenciaDet">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

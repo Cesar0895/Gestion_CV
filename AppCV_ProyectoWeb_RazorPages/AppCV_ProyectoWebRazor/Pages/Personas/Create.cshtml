@@ -1,0 +1,59 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.Personas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Persona</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Persona.Nombres" class="control-label"></label>
+                <input asp-for="Persona.Nombres" class="form-control" />
+                <span asp-validation-for="Persona.Nombres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persona.ApellidoPat" class="control-label"></label>
+                <input asp-for="Persona.ApellidoPat" class="form-control" />
+                <span asp-validation-for="Persona.ApellidoPat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persona.ApellidoMat" class="control-label"></label>
+                <input asp-for="Persona.ApellidoMat" class="form-control" />
+                <span asp-validation-for="Persona.ApellidoMat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persona.Domicilio" class="control-label"></label>
+                <input asp-for="Persona.Domicilio" class="form-control" />
+                <span asp-validation-for="Persona.Domicilio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persona.Correo" class="control-label"></label>
+                <input asp-for="Persona.Correo" class="form-control" />
+                <span asp-validation-for="Persona.Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Persona.Telefono" class="control-label"></label>
+                <input asp-for="Persona.Telefono" class="form-control" />
+                <span asp-validation-for="Persona.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

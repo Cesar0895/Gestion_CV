@@ -1,0 +1,49 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.Competencias.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Competencia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.IdCurriculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.IdCurriculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.IdCompetencia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.IdCompetencia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.DesCompetencia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.DesCompetencia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.Dominio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.Dominio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Competencia.Detalle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Competencia.Detalle)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Competencia.IdCompetenciaDet">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,96 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.GradoEstudios.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Estudios</h2>
+
+<p>
+    <a class="btn btn-success" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].IdCurriculo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].NombreCarrera)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].IdTipoGenGradoStudio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].IdGenGradoEstudio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].NombreEscuela)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].PeriodoIni)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].PeriodoFin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].UltimoGradoEstudio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].PrefijoEstudio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].IdTipoEstatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GradoEstudio[0].IdEstatus)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GradoEstudio) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCurriculo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCarrera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoGenGradoStudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdGenGradoEstudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEscuela)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PeriodoIni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PeriodoFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UltimoGradoEstudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrefijoEstudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoEstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstatus)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.IdCarrerarGradoEstudio">Edit</a> |
+                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.IdCarrerarGradoEstudio">Details</a> |
+                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.IdCarrerarGradoEstudio">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

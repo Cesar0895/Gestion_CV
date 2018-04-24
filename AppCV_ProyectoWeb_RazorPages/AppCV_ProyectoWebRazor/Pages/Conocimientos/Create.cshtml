@@ -1,0 +1,54 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.Conocimientos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Conocimiento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Conocimiento.IdCurriculo" class="control-label"></label>
+                <input asp-for="Conocimiento.IdCurriculo" class="form-control" />
+                <span asp-validation-for="Conocimiento.IdCurriculo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conocimiento.IdConocimiento" class="control-label"></label>
+                <input asp-for="Conocimiento.IdConocimiento" class="form-control" />
+                <span asp-validation-for="Conocimiento.IdConocimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conocimiento.DesConocimiento" class="control-label"></label>
+                <input asp-for="Conocimiento.DesConocimiento" class="form-control" />
+                <span asp-validation-for="Conocimiento.DesConocimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conocimiento.Dominio" class="control-label"></label>
+                <input asp-for="Conocimiento.Dominio" class="form-control" />
+                <span asp-validation-for="Conocimiento.Dominio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conocimiento.Detalle" class="control-label"></label>
+                <input asp-for="Conocimiento.Detalle" class="form-control" />
+                <span asp-validation-for="Conocimiento.Detalle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

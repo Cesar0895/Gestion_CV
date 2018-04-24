@@ -1,0 +1,85 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.GradoEstudios.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GradoEstudio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.IdCurriculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.IdCurriculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.NombreCarrera)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.NombreCarrera)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.IdTipoGenGradoStudio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.IdTipoGenGradoStudio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.IdGenGradoEstudio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.IdGenGradoEstudio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.NombreEscuela)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.NombreEscuela)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.PeriodoIni)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.PeriodoIni)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.PeriodoFin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.PeriodoFin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.UltimoGradoEstudio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.UltimoGradoEstudio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.PrefijoEstudio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.PrefijoEstudio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.IdTipoEstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.IdTipoEstatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GradoEstudio.IdEstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GradoEstudio.IdEstatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.GradoEstudio.IdCarrerarGradoEstudio">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,84 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.GradoEstudios.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>GradoEstudio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.IdCurriculo" class="control-label"></label>
+                <input asp-for="GradoEstudio.IdCurriculo" class="form-control" />
+                <span asp-validation-for="GradoEstudio.IdCurriculo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.NombreCarrera" class="control-label"></label>
+                <input asp-for="GradoEstudio.NombreCarrera" class="form-control" />
+                <span asp-validation-for="GradoEstudio.NombreCarrera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.IdTipoGenGradoStudio" class="control-label"></label>
+                <input asp-for="GradoEstudio.IdTipoGenGradoStudio" class="form-control" />
+                <span asp-validation-for="GradoEstudio.IdTipoGenGradoStudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.IdGenGradoEstudio" class="control-label"></label>
+                <input asp-for="GradoEstudio.IdGenGradoEstudio" class="form-control" />
+                <span asp-validation-for="GradoEstudio.IdGenGradoEstudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.NombreEscuela" class="control-label"></label>
+                <input asp-for="GradoEstudio.NombreEscuela" class="form-control" />
+                <span asp-validation-for="GradoEstudio.NombreEscuela" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.PeriodoIni" class="control-label"></label>
+                <input asp-for="GradoEstudio.PeriodoIni" class="form-control" />
+                <span asp-validation-for="GradoEstudio.PeriodoIni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.PeriodoFin" class="control-label"></label>
+                <input asp-for="GradoEstudio.PeriodoFin" class="form-control" />
+                <span asp-validation-for="GradoEstudio.PeriodoFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.UltimoGradoEstudio" class="control-label"></label>
+                <input asp-for="GradoEstudio.UltimoGradoEstudio" class="form-control" />
+                <span asp-validation-for="GradoEstudio.UltimoGradoEstudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.PrefijoEstudio" class="control-label"></label>
+                <input asp-for="GradoEstudio.PrefijoEstudio" class="form-control" />
+                <span asp-validation-for="GradoEstudio.PrefijoEstudio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.IdTipoEstatus" class="control-label"></label>
+                <input asp-for="GradoEstudio.IdTipoEstatus" class="form-control" />
+                <span asp-validation-for="GradoEstudio.IdTipoEstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GradoEstudio.IdEstatus" class="control-label"></label>
+                <input asp-for="GradoEstudio.IdEstatus" class="form-control" />
+                <span asp-validation-for="GradoEstudio.IdEstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

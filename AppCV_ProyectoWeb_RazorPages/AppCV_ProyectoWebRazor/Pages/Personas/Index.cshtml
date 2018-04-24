@@ -1,0 +1,66 @@
+﻿@page
+@model AppCV_ProyectoWebRazor.Pages.Personas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Informacion Personal</h2>
+
+<p>
+    <a class="btn btn-success" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].Nombres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].ApellidoPat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].ApellidoMat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].Domicilio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].Correo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Persona[0].Telefono)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Persona) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoPat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoMat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domicilio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.IdCurriculo">Edit</a> |
+                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.IdCurriculo">Details</a> |
+                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.IdCurriculo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -28,20 +28,36 @@
                 </button>
                 <a asp-page="/Index" class="navbar-brand">AppCV_ProyectoWebRazor</a>
             </div>
-            <div class="navbar-collapse collapse">
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Curriculo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a asp-page="/Personas/Index">Inf. personal</a>
+                                    <a asp-page="/Competencias/Index">Competencias</a>
+                                    <a asp-page="/GradoEstudios/Index">Estudios</a>
+                                    <a asp-page="/Conocimientos/Index">Conocimientos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
                 </ul>
             </div>
+
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - AppCV_ProyectoWebRazor</p>
+            <p>&copy; 2018 - AppCV_ProyectoWebRazor</p>
         </footer>
     </div>
 
