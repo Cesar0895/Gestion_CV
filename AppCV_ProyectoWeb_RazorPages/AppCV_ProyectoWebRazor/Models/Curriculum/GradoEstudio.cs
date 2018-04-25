@@ -17,7 +17,7 @@ namespace AppCV_ProyectoWebRazor.Models
         public string NombreEscuela { get; set; }
         public DateTime PeriodoIni { get; set; }
         public DateTime PeriodoFin { get; set; }
-        public string UltimoGradoEstudio { get; set; }
+        public bool UltimoGradoEstudio { get; set; }
         public string PrefijoEstudio { get; set; }
         public int IdTipoEstatus { get; set; }
         public int IdEstatus { get; set; }

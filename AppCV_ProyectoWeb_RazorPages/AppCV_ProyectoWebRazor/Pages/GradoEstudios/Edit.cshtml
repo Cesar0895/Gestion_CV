@@ -50,9 +50,11 @@
                 <span asp-validation-for="GradoEstudio.PeriodoFin" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GradoEstudio.UltimoGradoEstudio" class="control-label"></label>
-                <input asp-for="GradoEstudio.UltimoGradoEstudio" class="form-control" />
-                <span asp-validation-for="GradoEstudio.UltimoGradoEstudio" class="text-danger"></span>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="GradoEstudio.UltimoGradoEstudio" /> @Html.DisplayNameFor(model => model.UltimoGradoEstudio)
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="GradoEstudio.PrefijoEstudio" class="control-label"></label>
